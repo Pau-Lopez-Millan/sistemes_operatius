@@ -38,6 +38,13 @@
       <p>Per a començar, revisarem la prioritat d'actualització i altres dades de 
          l'aplicació amb "apt-cache policy (paquet)".</p>
       <img src="../img/apt-cache.png">
+      <p>Ara hem de descarregar els repositoris oficials de smplayer per veure quin
+        es el més antic per a fer-li pinning</p>
+      <img src="../img/afegit_repositori.png">
+      <p>Tot seguit, hem de confirmar que els repositoris, per saver si entre
+        el de Ubuntu o el que hem descarregat, quin es el més antic. Això ho
+        farem amb "apt-cache policy smplayer".</p>
+      <img src="../img/revisió_repositoris_instal·lats.png">
       <p>A continuació, si la prioritat de la versió actual no es la desitjada,
          creem el fitxer "/etc/apt/preferenses.d/smplayer-pin-400", on configurarem
          la prioritat del nostre paquet.</p>
