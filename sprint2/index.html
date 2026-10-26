@@ -42,17 +42,20 @@
       <img src="../img/Sprint2/permisos_i_resultat.png" alt="permisos_i_resultats">
       <p>Tot seguit, comprovem que funcioni correctament i que s'hagin creat els
         processos i que estiguin "orfes", depenent de "systemd" en comptes de en
-        "sospitosos"</p>
+        "sospitosos".</p>
       <img src="../img/Sprint2/proces_backup_nocturn_i_espia.png" alt="proces_backup_nocturn_i_espia">
       <img src="../img/Sprint2/proces_minadors.png" alt="proces_minadors">
       <p>Com podem veure ara, els processos que es troven a dalt de tot són els
-        minadors, consumint gairebé la meitat d'un nucli cada un</p>
+        minadors, consumint gairebé la meitat d'un nucli cada un.</p>
       <img src="../img/Sprint2/comprovacio_prioritat_top.png" alt="comprovacio_prioritat_top">
       <p>Tot seguit, com podem veure, els 4 processos, els 2 minadors, espia i
         backup_nocturn depenen d'un sol pare, de systemd i ho descobrim gràcies
-        al comandament "ps -o pid,ppid,user,stat,etime,%cpu,comm -C minador,espia,backup_nocturn"</p>
+        al comandament "ps -o pid,ppid,user,stat,etime,%cpu,comm -C minador,espia,backup_nocturn".</p>
       <img src="../img/Sprint2/filtrat_amb_ps.png" alt="filtrat_amb_ps">
-      <p>Com es pot veure, hem intentat</p>
+      <p>Com es pot veure, hem intentat fer els comandaments bg %1, que porta el
+        proces a segon pla, fg %1 que porta el process a primer pla, i jobs -l,
+        que llista les tasques que s'estan duen a terme, com descarrega, en aquest
+        cas.</p>
       <img src="../img/Sprint2/funcionament_descarrega.png" alt="funcionament_descarrega">
       <ul>
         <li>Actualitzar la llista de paquets disponibles.</li>
