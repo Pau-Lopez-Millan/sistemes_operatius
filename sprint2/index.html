@@ -29,17 +29,29 @@
         <tr><th>#</th><th>Apartat</th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td><a href="#apartat1">Gestors de paquets</a></td></tr>
+        <tr><td>1</td><td><a href="#apartat1">Gestio de processos</a></td></tr>
         <tr><td>2</td><td><a href="#apartat2">Permisos i propietaris d'arxius</a></td></tr>
       </tbody>
     </table>
 
     <article class="apartat" id="apartat1">
-      <h2>1. Gestors de paquets</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. El gestor de
-         paquets permet <strong>instal·lar, actualitzar i eliminar</strong>
-         programari de manera controlada.</p>
+      <h2>1. Gestio de processos</h2>
+      <p>El primer pas ha estat crear els fitxers de la missió i aplicar els permisos
+      corresponents per a poder executar-los i els executem, veient que funcionen
+      correctament.</p>
+      <img src="../img/Sprint2/permisos_i_resultat.png" alt="permisos_i_resultats">
+      <p>Tot seguit, comprovem que funcioni correctament i que s'hagin creat els
+        processos i que estiguin "orfes", depenent de "systemd" en comptes de en
+        "sospitosos"</p>
+      <img src="../img/Sprint2/proces_backup_nocturn_i_espia.png" alt="proces_backup_nocturn_i_espia">
+      <img src="../img/Sprint2/proces_minadors.png" alt="proces_minadors">
+      <p>Com podem veure ara, els processos que es troven a dalt de tot són els
+        minadors, consumint gairebé la meitat d'un nucli cada un</p>
+      <img src="../img/Sprint2/comprovacio_prioritat_top.png" alt="comprovacio_prioritat_top">
+      <p>Tot seguit, com podem veure, els 4 processos, els 2 minadors, espia i
+        backup_nocturn depenen d'un sol pare, de systemd i ho descobrim gràcies
+        al comandament "ps -o pid,ppid,user,stat,etime,%cpu,comm -C minador,espia,backup_nocturn"</p>
+      <img src="../img/Sprint2/filtrat_amb_ps.png" alt="filtrat_amb_ps">
       <ul>
         <li>Actualitzar la llista de paquets disponibles.</li>
         <li>Instal·lar un paquet nou.</li>
