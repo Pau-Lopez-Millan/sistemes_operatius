@@ -68,12 +68,20 @@
     </article>
     <article class="apartat" id="apartat2">
       <h2>2. Gestió de discs</h2>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-         ut aliquip ex ea commodo consequat. Cada arxiu té un
-         <strong>propietari, un grup i uns permisos</strong> que en determinen
-         l'accés.</p>
-      <img src="../img/exemple.svg" alt="Exemple de captura de pantalla dels permisos d'un arxiu">
-      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+      <p>Com podem veure, dintre del original.sha, surten els codis hash de foto.png,
+      apunts.pdf i notes.txt.</p>
+      <img src="../img/Sprint2/cat_original.png" alt="original.sha">
+      <p>Com podem veure, en montar el disc, l'unic directori que es crea es el
+        "lost+found".</p>
+      <img src="../img/Sprint2/ls_lost+found.png" alt="lost+found">
+      <p>En recuperar els fitxers, podem comprovar que són els mateixos pel codi
+      hash que podem veure amb el comandament "sha256sum fitxer".</p>
+      <img src="../img/Sprint2/compariacio_sha.png" alt="comparacio_sha">
+      <p>Com podem veure, tot i no ser visible, podem trobar la frase de notes.txt,
+      o sols un fragment com es "pizza" en el nostre cas.</p>
+      <img src="../img/Sprint2/frase.png" alt="lost+found">
+
+      <img src="../img/Sprint2/.png" alt="lost+found">
       <p><strong>Preguntes</strong></p>
       <p>1. Es trovaben al fitxer "lost+found" de la imatge de disc.</p>
       <p>2. Perque s'han guardat les dades que es trovaven als fitxers, però no
@@ -90,6 +98,7 @@
       <p>6. Jo faria un de baix nivell, per a eliminar completament les dades i
          evitar que el comprador pugui recuperar les imatges que es troben i no
         trobi res que no desitjem.</p>
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
   </section>
 </main>
