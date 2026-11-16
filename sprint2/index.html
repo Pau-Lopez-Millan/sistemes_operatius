@@ -39,50 +39,50 @@
       <p>El primer pas ha estat crear els fitxers de la missió i aplicar els permisos
       corresponents per a poder executar-los i els executem, veient que funcionen
       correctament.</p>
-      <img src="../img/Sprint2/permisos_i_resultat.png" alt="permisos_i_resultats">
+      <img src="../img/Sprint2/processos/captura1.png" alt="permisos_i_resultats">
       <p>Tot seguit, comprovem que funcioni correctament i que s'hagin creat els
         processos i que estiguin "orfes", depenent de "systemd" en comptes de en
         "sospitosos".</p>
-      <img src="../img/Sprint2/proces_backup_nocturn_i_espia.png" alt="proces_backup_nocturn_i_espia">
-      <img src="../img/Sprint2/proces_minadors.png" alt="proces_minadors">
+      <img src="../img/Sprint2/processos/captura2.png" alt="proces_backup_nocturn_i_espia">
+      <img src="../img/Sprint2/processos/captura3.png" alt="proces_minadors">
       <p>Com podem veure ara, els processos que es troven a dalt de tot són els
         minadors, consumint gairebé la meitat d'un nucli cada un.</p>
-      <img src="../img/Sprint2/comprovacio_prioritat_top.png" alt="comprovacio_prioritat_top">
+      <img src="../img/Sprint2/processos/captura4.png" alt="comprovacio_prioritat_top">
       <p>Tot seguit, com podem veure, els 4 processos, els 2 minadors, espia i
         backup_nocturn depenen d'un sol pare, de systemd i ho descobrim gràcies
         al comandament "ps -o pid,ppid,user,stat,etime,%cpu,comm -C minador,espia,backup_nocturn".</p>
-      <img src="../img/Sprint2/filtrat_amb_ps.png" alt="filtrat_amb_ps">
+      <img src="../img/Sprint2/processos/captura5.png" alt="filtrat_amb_ps">
       <p>Com es pot veure, hem intentat fer els comandaments bg %1, que porta el
         proces a segon pla, fg %1 que porta el process a primer pla, i jobs -l,
         que llista les tasques que s'estan duen a terme, com descarrega, en aquest
         cas.</p>
-      <img src="../img/Sprint2/funcionament_descarrega.png" alt="funcionament_descarrega">
+      <img src="../img/Sprint2/processos/captura6.png" alt="funcionament_descarrega">
       <p>A continuació, com podem veure, el programa espia no s'ha pogut eliminar
         amb "kill", però si amb "kill -9". A la vegada, backup_nocturn ha pogut
         ser pausat i reactivat correctament.</p>
-      <img src="../img/Sprint2/eliminar_processos.png" alt="eliminar_processos">
+      <img src="../img/Sprint2/processos/captura7.png" alt="eliminar_processos">
       <p>Per a acabar, hem pogut comprovar que el process de Descarrega pot
         proseguir en segon pla correctament fins a ser complet.</p>
-      <img src="../img/Sprint2/compleció_segon_pla.png" alt="compleció_segon_pla">
+      <img src="../img/Sprint2/processos/captura8.png" alt="compleció_segon_pla">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
     <article class="apartat" id="apartat2">
       <h2>2. Gestió de discs</h2>
       <p>Com podem veure, dintre del original.sha, surten els codis hash de foto.png,
       apunts.pdf i notes.txt.</p>
-      <img src="../img/Sprint2/cat_original.png" alt="original.sha">
+      <img src="../img/Sprint2/recuperació_dades/captura1.png" alt="original.sha">
       <p>Com podem veure, en montar el disc, l'unic directori que es crea es el
         "lost+found".</p>
-      <img src="../img/Sprint2/ls_lost+found.png" alt="lost+found">
+      <img src="../img/Sprint2/recuperació_dades/captura2.png" alt="lost+found">
       <p>En recuperar els fitxers, podem comprovar que són els mateixos pel codi
       hash que podem veure amb el comandament "sha256sum fitxer".</p>
-      <img src="../img/Sprint2/comparacio_sha.png" alt="comparacio_sha">
+      <img src="../img/Sprint2/recuperació_dades/captura3.png" alt="comparacio_sha">
       <p>Com podem veure, tot i no ser visible, podem trobar la frase de notes.txt,
       o sols un fragment com es "pizza" en el nostre cas.</p>
-      <img src="../img/Sprint2/frase.png" alt="lost+found">
+      <img src="../img/Sprint2/recuperació_dades/captura4.png" alt="lost+found">
       <p>Per a acabar, quan intenetem comprovar si s'han recuperat fitxers despres
         del nou formateig, podem comprovar que no s'ha pogut recuperar ningun.</p>
-      <img src="../img/Sprint2/fitxers_no_trobats.png" alt="lost+found">
+      <img src="../img/Sprint2/recuperació_dades/captura5.png" alt="lost+found">
       <p><strong>Preguntes</strong></p>
       <p>1. Es trovaben al fitxer "lost+found" de la imatge de disc.</p>
       <p>2. Perque s'han guardat les dades que es trovaven als fitxers, però no
