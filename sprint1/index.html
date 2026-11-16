@@ -37,26 +37,26 @@
         <h2>1. Instal·lació i fixació d'aplicacions (pin pakage)</h2>
       <p>Per a començar, revisarem la prioritat d'actualització i altres dades de 
          l'aplicació amb "apt-cache policy (paquet)".</p>
-      <img src="../img/Sprint1/pinpacket/apt-cache.png">
+      <img src="../img/Sprint1/pinpacket/captura1.png" alt="captura1">
       <p>Ara hem de descarregar els repositoris oficials de smplayer per veure quin
         es el més antic per a fer-li pinning</p>
-      <img src="../img/Sprint1/pinpacket/afegit_repositori.png">
+      <img src="../img/Sprint1/pinpacket/captura2.png" alt="captura2">
       <p>Tot seguit, hem de confirmar que els repositoris, per saver si entre
         el de Ubuntu o el que hem descarregat, quin es el més antic. Això ho
         farem amb "apt-cache policy smplayer".</p>
-      <img src="../img/Sprint1/pinpacket/revisió_repositoris_instal·lats.png">
+      <img src="../img/Sprint1/pinpacket/captura3.png" alt="captura3">
       <p>A continuació, si la prioritat de la versió actual no es la desitjada,
          creem el fitxer "/etc/apt/preferenses.d/smplayer-pin-400", on configurarem
          la prioritat del nostre paquet.</p>
-      <img src="../img/Sprint1/pinpacket/fixer_prioritat.png">
+      <img src="../img/Sprint1/pinpacket/captura4.png" alt="captura4">
       <p>Un cop dintre del nou fitxer, haurem de definir el paquet que volem fixar,
          d'on surt la distribució i la prioritat que té.</p>
-      <img src="../img/Sprint1/pinpacket/text_prioritat.png">
+      <img src="../img/Sprint1/pinpacket/captura5.png" alt="captura5">
       <p>Seguidament, revisem la versió amb més prioritat amb l'apt-cache.</p>
-      <img src="../img/Sprint1/pinpacket/Confirmar_prioritat_antiga.png">
+      <img src="../img/Sprint1/pinpacket/captura6.png" alt="captura6">
       <p>Per a acabar, amb el comandament "apt-cache policy | grep (paquet)" podem
          veure les prioritats asignades a aquell paquet.</p>
-      <img src="../img/Sprint1/pinpacket/resultat_prioritat.png">
+      <img src="../img/Sprint1/pinpacket/captura7.png" alt="captura1">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
   </section>
