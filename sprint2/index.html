@@ -31,6 +31,7 @@
       <tbody>
         <tr><td>1</td><td><a href="#apartat1">Gestió de processos</a></td></tr>
         <tr><td>2</td><td><a href="#apartat2">Gestió de discs</a></td></tr>
+        <tr><td>2</td><td><a href="#apartat2">Gestió de discs</a></td></tr>
       </tbody>
     </table>
 
@@ -83,7 +84,7 @@
       <p>Per a acabar, quan intenetem comprovar si s'han recuperat fitxers despres
         del nou formateig, podem comprovar que no s'ha pogut recuperar ningun.</p>
       <img src="../img/Sprint2/recuperació_dades/captura5.png" alt="lost+found">
-      <p><strong>Preguntes</strong></p>
+      <p><strong>Preguntes:</strong></p>
       <p>1. Es trovaben al fitxer "lost+found" de la imatge de disc.</p>
       <p>2. Perque s'han guardat les dades que es trovaven als fitxers, però no
          les dades d'etiquetatge i nom dels fitxers.</p>
@@ -99,6 +100,42 @@
       <p>6. Jo faria un de baix nivell, per a eliminar completament les dades i
          evitar que el comprador pugui recuperar les imatges que es troben i no
         trobi res que no desitjem.</p>
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+    <article class="apartat" id="apartat3">
+      <p>Com podem apreciar, la mida de la partició es de 1GB, mentre que els sectors 
+        són de 512 bytes cada un.</p>
+      <img src="../img/Sprint2/Sistemes_fitxers_particions/captura1.png" alt="particions">
+      <p>A continuació es pot veure com els blocs són de 2048 bytes de mida actual i minima.</p>
+      <img src="../img/Sprint2/Sistemes_fitxers_particions/captura2.png" alt="original.sha">
+      <p>Seguidament, podem veure els detalls de les particions del disc sdb i de les seves
+      particions.</p>
+      <img src="../img/Sprint2/Sistemes_fitxers_particions/captura3.png" alt="original.sha">
+      <p>Ara hem canviat el sistema de fitxers de la partició 2 de ext4 a NTFS i ho hem
+        confirmat per si fallava.</p>
+      <img src="../img/Sprint2/Sistemes_fitxers_particions/captura4.png" alt="original.sha">
+      <p>A continuació es pot veure com els blocs són de 65536 bytes de mida actual i minima.</p>
+      <img src="../img/Sprint2/Sistemes_fitxers_particions/captura5.png" alt="original.sha">
+      <p>En aquest cas, ens assegurem que l'script de automuntatge de sdb2 funciona sense
+        errors i els detalls de la partició.</p>
+      <img src="../img/Sprint2/Sistemes_fitxers_particions/captura6.png" alt="original.sha">
+      <p>Ara, podem veure la informació de les ubicacions de informe.txt, quina mida té i
+      la maida que ocupa en la partició</p>
+      <img src="../img/Sprint2/Sistemes_fitxers_particions/captura7.png" alt="original.sha">
+      <p><strong>Preguntes:</strong></p>
+      <p>1. El sector es l'unitat més petita sobre la qual el disc pot llegir o escriure.
+        La mida dels sectors la fixa el fabricant, nosaltres no la podem modificar.</p>
+      <p>2. La mida del meu disc es de 512 bytes, que és la mida tradicional per als
+        sectors</p>
+      <p>3. El bloc és la mida minima que ocupara un fitxer, per exemple, si els blocs
+        són de 1KB, un fitxer de menys d'1KB seguira ocupant-lo, ja que esta ocupant
+        el bloc. La principal diferencia es que el bloc es pot definir la seva mida,
+        en crear la partició.</p>
+      <p>4. La mida de bloc del meu disc es de 2048 bytes. En total hi caven 4 sectors</p>
+      <p>5. Un fitxer de 3000 bytes ocuparia 2 blocs, i si els clusters són de 64KiB,
+        sols n'ocupara 1, però caven uns 128 sectors, ja que cada KiB és 1024 bytes, la
+        meitat d'un sector.</p>
+      <p>6. </p>
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
   </section>
